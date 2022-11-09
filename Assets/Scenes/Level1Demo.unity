@@ -223,7 +223,7 @@ PlatformEffector2D:
   m_RotationalOffset: 180
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 146
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 0
@@ -828,7 +828,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7.2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1052,7 +1052,7 @@ PlatformEffector2D:
   m_RotationalOffset: 180
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 146
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -1209,7 +1209,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.02804625}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1220,7 +1220,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.95, y: 1.6}
+  m_Size: {x: 1.95, y: 1.5439076}
   m_EdgeRadius: 0
 --- !u!50 &564924720
 Rigidbody2D:
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  isFracingRight: 1
+  Right: 1
   reboundSpeed: 7
 --- !u!114 &564924722
 MonoBehaviour:
@@ -9301,8 +9301,8 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: -0.10121453, y: 0.0034902096}
   m_Size: {x: 0.5634906, y: 1.0102313}
@@ -9796,7 +9796,7 @@ MonoBehaviour:
   m_Follow: {fileID: 564924718}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 7.2
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -9906,8 +9906,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898304715}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35179996, y: 0.00819993, z: 10}
-  m_LocalScale: {x: 1.2871201, y: 1.1470941, z: 1}
+  m_LocalPosition: {x: -0.3457, y: -0.108, z: 10}
+  m_LocalScale: {x: 1.6358005, y: 1.6379704, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1859732166}
@@ -10002,7 +10002,7 @@ PlatformEffector2D:
   m_RotationalOffset: 180
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 146.63
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
