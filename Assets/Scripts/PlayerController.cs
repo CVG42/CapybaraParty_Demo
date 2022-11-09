@@ -8,11 +8,10 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public int maxJumps;
     public LayerMask whatIsGround;
-
     private Rigidbody2D rigidBody;
     private BoxCollider2D boxCollider;
     private Animator animator;
-    public bool isFracingRight = true;
+    public bool Right = true;
     private int jumpsLeft;
 
     [Header("Jump on Enemy")]
@@ -28,19 +27,19 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        ProcesarMovimiento();
-        ProcesarSalto();
+        Movement();
+        Jump();
     }
 
-    bool EstaEnSuelo()
+    bool isGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, new Vector2(boxCollider.bounds.size.x, boxCollider.bounds.size.y), 0f, Vector2.down, 0.2f, whatIsGround);
         return raycastHit.collider != null;
     }
 
-    void ProcesarSalto()
+    void Jump()
     {
-        if (EstaEnSuelo())
+        if (isGrounded())
         {
             jumpsLeft = maxJumps;
             animator.SetBool("isGrounded", false);
@@ -63,7 +62,7 @@ public class PlayerController : MonoBehaviour
         rigidBody.velocity = new Vector2(rigidBody.velocity.x, reboundSpeed);
     }
 
-    void ProcesarMovimiento()
+    void Movement()
     {
         float xMovement = Input.GetAxis("Horizontal");
         if(xMovement != 0f)
@@ -77,14 +76,14 @@ public class PlayerController : MonoBehaviour
 
         rigidBody.velocity = new Vector2(xMovement * speed, rigidBody.velocity.y);
 
-        GestionarOrientacion(xMovement);
+        Flip(xMovement);
     }
 
-    void GestionarOrientacion(float xMovement)
+    void Flip(float xMovement)
     {
-        if ((isFracingRight == true && xMovement < 0) || (isFracingRight == false && xMovement > 0))
+        if ((Right == true && xMovement < 0) || (Right == false && xMovement > 0))
         {
-            isFracingRight = !isFracingRight;
+            Right = !Right;
             transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180);
         }
     }
